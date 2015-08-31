@@ -1,0 +1,11 @@
+color jellybeans 
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+"open splits below and on the right
+set splitbelow
+set splitright
+"splits navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
