@@ -1,5 +1,5 @@
-color jellybeans
-set guifont=Monaco\ for\ Powerline:12
+color jellybeans 
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 "open splits below and on the right
 set splitbelow
 set splitright
@@ -8,7 +8,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-" show relative number
 set relativenumber
 " air-line
 let g:airline_powerline_fonts = 1
@@ -24,3 +23,19 @@ autocmd FileType python nmap <F8> :call RunWith("python")<cr>
 autocmd FileType ruby   nmap <F8> :call RunWith("ruby")<cr>
 "Rspec hotkey
 autocmd BufRead *_spec.rb nmap <F6> :w\|!clear && rspec % --format documentation --color<cr>
+
+" taken from:
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim/1618401#1618401
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+" auto-strip trailing white space for ruby files
+autocmd BufWritePre *.rb,*.erb,*.haml,*.yml,*.coffee,*.js :call <SID>StripTrailingWhitespaces()
+" command to strip white space from any file
+nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<cr>"
+"vim.ack searches using project folder as root
+let g:ag_working_path_mode="r"
