@@ -1,0 +1,20 @@
+#nvim/.git
+zsh/private.zsh
+zsh/.zsh_history
+zsh/.zcompdump
+.DS_Store
+git/config-personal
+git/config
+git/config-work
+git/config-work2
+avitech/config.json
+avitech/settings.xml
+avitech/toolchains.xml
+# Don't ignore
+!git/config-personal.age
+!git/config.age
+!git/config-work.age
+!git/config-work2.age
+!avitech/config.json.age
+!avitech/settings.xml.age
+!avitech/toolchains.xml.age
