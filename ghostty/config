@@ -4,8 +4,8 @@ mouse-hide-while-typing = true
 window-decoration = true
 #macos-option-as-alt = true
 
-font-family = RecMonoLinear Nerd Font Mono
-#font-family = Iosevka Nerd Font
+#font-family = RecMonoLinear Nerd Font Mono
+font-family = Fira Code
 #font-family = Cascadia Code
 #font-family = Victor Mono
 #font-family = MesloLGS NF

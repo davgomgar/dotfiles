@@ -3,7 +3,7 @@
 echo "Signin to 1password if needed..."
 op vault list >/dev/null 2>&1 || eval $(op signin)
 
-FILES_TO_ENCRYPT=("./zsh/private.zsh" "./git/config" "./git/config-work" "./git/config-work2" "./git/config-personal" "./avitech/config.json" "./avitech/settings.xml" "./avitech/toolchains.xml")
+FILES_TO_ENCRYPT=("./zsh/private.zsh" "./git/config" "./git/config-work" "./git/config-work2" "./git/config-personal" "./avitech/config.json" "./avitech/settings.xml" "./avitech/settings-nm.xml" "./avitech/toolchains.xml")
 
 AGE_PUBLIC_KEY="$(op item get "dotfiles-public-key" --field notesPlain)"
 
