@@ -37,6 +37,9 @@ buildNumber.properties
 **/.flattened-pom.xml
 **/.ci-friendly-pom.xml
 
+# Node folder created by Maven frontend plugin
+node/
+
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 # Eclipse
